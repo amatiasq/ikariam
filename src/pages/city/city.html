@@ -1,0 +1,21 @@
+<h1>{{ city.name }}</h1>
+<h2>{{ owner.name }}</h2>
+
+<ul>
+  <li ng-repeat="(key, building) in buildings">
+    <div ng-show="building">
+      <h3>{{ building.name }} (lvl {{building.level }})</h3>
+      <button class="btn btn-success" ng-click="building.upgrade()">Upgrade</button>
+      <button class="btn btn-danger" ng-click="building.downgrade()">Downgrade</button>
+    </div>
+
+    <div ng-show="!building">
+      <select class="form-group"
+        ng-options="type as type.name for type in buildingTypes"
+        ng-model="model.newBuilding"
+        ng-change="build(key)">
+        <option value="">Build...</option>
+      </select>
+    </div>
+  </li>
+</ul>

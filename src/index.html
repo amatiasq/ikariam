@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xml:lang="es" lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ikariam clone">
+    <meta name="author" content="">
+    <title>Ikariam clone</title>
+    <base href="/ikariam" />
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Ikariam clone" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="A ikariam clone" />
+
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <script src="//cdn.polyfill.io/v1/polyfill.min.js"></script>
+
+    <!-- build:css /build.css -->
+    <link rel="stylesheet/less" href="/styles.less">
+    <script>less = { rootpath: '/', logLevel: 1 };</script>
+    <script src="/bower_components/less/dist/less.js"></script>
+    <!-- endbuild -->
+  </head>
+
+  <body>
+    <div class="page-wrap" amq-current-state="state-">
+      <ui-view></ui-view>
+    </div>
+
+    <!-- build:js /build.js -->
+    <script src="/bower_components/requirejs/require.js" data-main="bootstrap.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
