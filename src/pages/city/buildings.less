@@ -1,0 +1,206 @@
+.building {
+  position: relative;
+  height: 0;
+  width: 0;
+
+  .building-image {
+    position: absolute;
+    .center(129px, 78px);
+  }
+
+  &.empty {
+    &.land .building-image {
+      background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/baustelle_land_rot.png);
+      &:hover { background-image:
+        url(//s9-ar.ikariam.gameforge.com/skin/img/city/baustelle_land_rot.png),
+        url(//gf3.geo.gfsrv.net/cdn53/712e36466808e5d3dceed4d346eb71.png);
+      }
+    }
+    &.sea .building-image,
+    &.shore .building-image {
+      background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/baustelle_wasser_rot.png);
+      &:hover { background-image:
+        url(//s9-ar.ikariam.gameforge.com/skin/img/city/baustelle_wasser_rot.png),
+        url(//gf3.geo.gfsrv.net/cdn85/8795fdaa43600741f545636eebc512.png);
+      }
+    }
+    &.wall .building-image {
+      .center(196px, 99px);
+      background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/baustelle_mauer_rot.png);
+      &:hover { background-image:
+        url(//s9-ar.ikariam.gameforge.com/skin/img/city/baustelle_mauer_rot.png),
+        url(//gf2.geo.gfsrv.net/cdn18/5afd702e22d0a88b3710d1b931b16a.png);
+      }
+    }
+    &.sea .building-image {
+      &:hover { background-image: url(//gf3.geo.gfsrv.net/cdn53/712e36466808e5d3dceed4d346eb71.png); }
+    }
+    &.locked .building-image {
+      background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/baustelle_nur_untergrund.png);
+    }
+  }
+
+  .place-building(0, 918px, 475px);
+  .place-building(1, 764px, 751px);
+  .place-building(2, 1119px, 730px);
+  .place-building(3, 1243px, 548px);
+  .place-building(4, 1044px, 569px);
+  .place-building(5, 885px, 609px);
+  .place-building(6, 683px, 590px);
+  .place-building(7, 525px, 550px);
+  .place-building(8, 524px, 429px);
+  .place-building(9, 684px, 470px);
+  .place-building(10, 1085px, 431px);
+  .place-building(11, 1241px, 389px);
+  .place-building(12, 942px, 325px);
+  .place-building(13, 804px, 372px);
+  .place-building(14, 486px, 297px);
+  .place-building(15, 562px, 730px);
+  .place-building(16, 1122px, 332px);
+  .place-building(17, 1122px, 905px);
+  .place-building(18, 1366px, 598px);
+
+  &.townHall .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/townhall_l.png);
+  }
+  &.barracks .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/barracks_r.png);
+  }
+  &.building1.port .building-image {
+    .center(215px; 150px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/port_r.png);
+  }
+  &.building2.port .building-image {
+    .center(215px; 150px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/port_l.png);
+  }
+  &.building1.shipyard .building-image {
+    .center(191px; 126px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/shipyard_r.png);
+  }
+  &.building2.shipyard .building-image {
+    .center(191px; 126px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/shipyard_l.png);
+  }
+  &.museum .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/museum_l.png);
+  }
+  &.warehouse .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/warehouse_l.png);
+  }
+  &.wall .building-image {
+    .center(201px; 111px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/wall.png);
+  }
+  &.tavern .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/taverne_l.png);
+  }
+  &.palace .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/palace_l.png);
+  }
+  &.palaceColony .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/palaceColony_l.png);
+  }
+  &.academy .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/academy_l.png);
+  }
+  &.workshop .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/workshop_l.png);
+  }
+  &.safehouse .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/safehouse_l.png);
+  }
+  &.temple .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/temple_l.png);
+  }
+  &.branchOffice .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/branchoffice_l.png);
+  }
+  &.embassy .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/embassy_l.png);
+  }
+  &.forester .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/forester_l.png);
+  }
+  &.stonemason .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/stonemason_l.png);
+  }
+  &.glassblowing .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/glassblowing_l.png);
+  }
+  &.winegrower .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/winegrower_l.png);
+  }
+  &.alchemist .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/alchemist_l.png);
+  }
+  &.carpentering .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/carpentering_l.png);
+  }
+  &.architect .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/architect_l.png);
+  }
+  &.optician .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/optician_l.png);
+  }
+  &.vineyard .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/vineyard_l.png);
+  }
+  &.fireworker .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/fireworker_l.png);
+  }
+  &.dump .building-image {
+    .center(172px; 140px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/dump_l.png);
+  }
+  &.blackMarket .building-image {
+    .center(172px; 133px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/blackmarket_l.png);
+  }
+  &.lockedPosition .building-image {
+    .center(129px; 78px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/baustelle_nur_untergrund.png);
+  }
+  &.pirateFortress .building-image {
+    .center(340px; 250px);
+    background-image: url(//s9-ar.ikariam.gameforge.com/skin/img/city/pirateFortress_l.png);
+  }
+}
+
+
+.place-building(@index, @left, @top) {
+  &.building@{index} {
+    top: @top;
+    left: @left;
+  }
+}
+
+.center(@width, @height) {
+  top: -@height / 2;
+  left: -@width / 2;
+  width: @width;
+  height: @height;
+}

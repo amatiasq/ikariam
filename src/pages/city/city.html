@@ -1,21 +1,29 @@
-<h1>{{ city.name }}</h1>
-<h2>{{ owner.name }}</h2>
-
-<ul>
-  <li ng-repeat="(key, building) in buildings">
-    <div ng-show="building">
-      <h3>{{ building.name }} (lvl {{building.level }})</h3>
-      <button class="btn btn-success" ng-click="building.upgrade()">Upgrade</button>
-      <button class="btn btn-danger" ng-click="building.downgrade()">Downgrade</button>
+<div class="city-wrapper">
+  <div class="city phase{{ buildings[0].level }}">
+    <div class="background"></div>
+    <div class="animations">
+      <div class="well-anim"></div>
+      <div class="river1"></div>
+      <div class="river2"></div>
+      <div class="river3"></div>
     </div>
 
-    <div ng-show="!building">
-      <select class="form-group"
-        ng-options="type as type.name for type in buildingTypes"
-        ng-model="model.newBuilding"
-        ng-change="build(key)">
-        <option value="">Build...</option>
-      </select>
-    </div>
-  </li>
-</ul>
+    <ul class="buildings">
+      <li ng-repeat="location in locations"
+        ng-init="building = buildings[$index]"
+        class="building building{{ $index }} {{ location.type }} {{ building.type }}"
+        title="{{ location.label }} ({{ location.level }})"
+        ng-class="{ empty: !building }">
+        <div class="building-image"></div>
+      </li>
+    </ul>
+
+    <div class="clearfix"></div>
+    -->
+  </div>
+</div>
+
+<div class="title">
+  <h1>{{ city.name }}</h1>
+  <h2>{{ owner.name }}</h2>
+</div>

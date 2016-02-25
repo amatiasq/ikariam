@@ -1,0 +1,54 @@
+.state-city {
+  @import './backgrounds';
+  @import './land-animations';
+  @import './buildings';
+  background: url(//gf1.geo.gfsrv.net/cdn3e/112fa07fd8c75ed3e2dfc28c84a9d0.jpg) repeat-x 0 0 transparent;
+
+  .city-wrapper {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .city {
+    position: absolute;
+    .buildings { .list-unstyled(); }
+
+    .animations,
+    .animated-well,
+    .background,
+    .buildings {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1920px;
+      height: 1200px;
+    }
+
+    .building {
+      position: absolute;
+      height: 50px;
+      width: 100px;
+    }
+  }
+
+  .title {
+    background-image: url(//gf1.geo.gfsrv.net/cdn38/6c3b367f0912f03f573c18a7e635ad.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 631px;
+    height: 133px;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #542c0f;
+    h1, h2 { margin: 0 };
+  }
+
+  li {
+    float: left;
+    width: 33%;
+    height: 100px;
+  }
+}

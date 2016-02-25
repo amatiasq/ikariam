@@ -1,2 +1,12 @@
 @import 'bower_components/bootstrap/less/bootstrap';
 @import 'pages/city/city';
+
+html, body, .page-wrap { height: 100% }
+
+.page-wrap {
+  display: flex;
+  > ui-view {
+    display: flex;
+    flex: 1
+  }
+}
