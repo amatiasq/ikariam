@@ -8,6 +8,14 @@ define(function(require) {
   module.factory('Building', function($firebaseObject) {
     var Building = $firebaseObject.$extend({
 
+      canUpgrade: function() {
+        return this.level < 32;
+      },
+
+      canDowngrade: function() {
+        return this.type !== 'townHall' || this.level > 1;
+      },
+
       upgrade: function() {
         this.level++;
         return this.$save();

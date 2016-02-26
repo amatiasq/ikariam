@@ -1,0 +1,15 @@
+<div class="btn-group-vertical">
+  <button type="button"
+    class="btn btn-success"
+    ng-disabled="!buildings[$index].canUpgrade()"
+    ng-click="buildings[$index].upgrade()">
+    Upgrade
+  </button>
+
+  <button type="button"
+    class="btn btn-danger"
+    ng-disabled="!buildings[$index].canDowngrade()"
+    ng-click="buildings[$index].downgrade()">
+    Downgrade
+  </button>
+</div>

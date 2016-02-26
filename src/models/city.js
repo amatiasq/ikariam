@@ -20,9 +20,11 @@ define(function(require) {
           list[i] = null;
 
         ref.on('child_added', function(snapshot) {
+          console.log('CHILD_ADDED', snapshot.key(), snapshot.val());
           list[snapshot.key()] = new Building(snapshot.val());
         });
         ref.on('child_removed', function(snapshot) {
+          console.log('CHILD_REMOVED', snapshot.key(), snapshot.val());
           list[snapshot.key()] = null;
         });
 
@@ -42,7 +44,7 @@ define(function(require) {
       build: function(location, type) {
         var model = {
           type: type.$id,
-          name: type.name,
+          label: type.name,
           level: 1,
         };
         var building = new Firebase(config.server + '/buildings').push(model);

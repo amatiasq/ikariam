@@ -1,5 +1,5 @@
 <div class="city-wrapper">
-  <div class="city phase{{ buildings[0].level }}">
+  <div class="city phase{{ getPhase() }}">
     <div class="background"></div>
     <div class="animations">
       <div class="well-anim"></div>
@@ -10,16 +10,27 @@
 
     <ul class="buildings">
       <li ng-repeat="location in locations"
-        ng-init="building = buildings[$index]"
-        class="building building{{ $index }} {{ location.type }} {{ building.type }}"
-        title="{{ location.label }} ({{ location.level }})"
-        ng-class="{ empty: !building }">
-        <div class="building-image"></div>
+        ng-init="buildingIndex = $index"
+        class="building building{{ $index }} {{ location.type }} {{ buildings[$index].type }}"
+        title="{{ buildings[$index].label }} ({{ buildings[$index].level }})"
+        ng-class="{ empty: !buildings[$index] }">
+
+        <div ng-if="buildings[$index]"
+          class="building-image"
+          uib-popover-template="'edit-building-popup'"
+          popover-title="{{ buildings[$index].label }} lvl {{ buildings[$index].level }}"
+          popover-placement="bottom">
+        </div>
+
+        <div ng-if="!buildings[$index]"
+          class="building-image"
+          uib-popover-template="'create-building-popup'"
+          popover-placement="bottom">
+        </div>
       </li>
     </ul>
 
     <div class="clearfix"></div>
-    -->
   </div>
 </div>
 
